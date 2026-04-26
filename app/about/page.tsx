@@ -1,6 +1,5 @@
 import {  TrendingUp, Send, AlertCircle, Rocket , Target, Eye, Award, CheckCircle } from 'lucide-react'
-
-
+import Image from 'next/image'
 const values = [
   {
     icon: CheckCircle,
@@ -28,19 +27,48 @@ const values = [
     description: 'We ensure a smooth and efficient onboarding process, allowing your practice to transition quickly with minimal disruption to operations.'
   }
 ];
-const team = [
-  { name: 'Dr. Sarah Johnson', role: 'Chief Medical Officer', specialty: 'Cardiology' },
-  { name: 'Dr. Michael Chen', role: 'Head of Neurology', specialty: 'Neurology' },
-  { name: 'Dr. Emily Davis', role: 'Lead Dermatologist', specialty: 'Dermatology' },
-  { name: 'Dr. James Wilson', role: 'Orthopedic Surgeon', specialty: 'Orthopedics' }
-]
 
-const milestones = [
-  { year: '2008', title: 'Founded', description: 'Started with a vision to transform healthcare' },
-  { year: '2012', title: 'Expansion', description: 'Opened 5 new specialty departments' },
-  { year: '2018', title: '10K Patients', description: 'Reached milestone of 10,000 patients served' },
-  { year: '2024', title: 'Top Rated', description: 'Recognized as top healthcare provider' }
-]
+
+const qualities = [
+  {
+    title: 'Transparent Pricing',
+    description:
+      'We don’t charge for claim submissions, task hours, or platform fees. Our flat 2% rate applies only to the payments you actually receive. If you don’t get paid, we don’t either. That’s how confident we are in our ability to deliver real results.',
+    img: '/quality/q1.png'
+  },
+  {
+    title: 'Aggressive Follow-Up, Faster Payments',
+    description:
+      'We don’t just submit claims. We follow up, appeal, and get your money moving — reducing A/R days and denial backlog.',
+    img: '/quality/q2.png'
+  },
+  {
+    title: 'HIPAA-Compliant and Audit-Ready',
+    description:
+      'Our workflows are aligned with payer standards and built to withstand audits — keeping you protected and worry-free.',
+    img: '/quality/q3.png'
+  },
+  {
+    title: 'Cutting-Edge Technology',
+    description:
+      'We utilize the latest billing software and tools to streamline your operations, enhance accuracy, and ensure you stay ahead of industry changes.',
+    img: '/quality/q4.jpg'
+  },
+  {
+    title: 'Live Reporting and Full Visibility',
+    description:
+      'You’ll know where your revenue stands at all times — no chasing spreadsheets or waiting for monthly updates.',
+    img: '/quality/q5.jpg'
+  },
+  {
+    title: 'Specialty-Aligned Billers',
+    description:
+      'Our team includes billers with expertise in over 25 medical specialties, ensuring your claims are coded accurately and optimized for maximum reimbursement.',
+    img: '/quality/q6.jpg'
+  }
+];
+
+
 
 export default function AboutPage() {
   return (
@@ -52,7 +80,7 @@ export default function AboutPage() {
             Precision-Driven Medical Billing. <br /> Transparent Pricing. <br /> <span className="bg-linear-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent">Real Results.</span>
           </h1>
           <p className="text-slate-500 max-w-3xl mx-auto text-lg leading-relaxed text-justify">
-            At Global Tech Billing LLC, we help healthcare providers simplify their revenue cycle, reduce administrative strain, and recover more of what they’ve earned — without the cost of managing an in-house billing team. With over a decade of real-world billing experience and deep knowledge across 50+ specialties, we act as a direct extension of your practice — not just another outsourced vendor.
+            At Clear Practice Billing, we help healthcare providers simplify their revenue cycle, reduce administrative strain, and recover more of what they’ve earned — without the cost of managing an in-house billing team. With over a decade of real-world billing experience and deep knowledge across 50+ specialties, we act as a direct extension of your practice — not just another outsourced vendor.
 
           </p>
           <p className="text-slate-500 max-w-3xl mx-auto text-lg leading-relaxed text-justify">
@@ -136,23 +164,20 @@ export default function AboutPage() {
 
         <div className="mb-20">
           <div className="text-center mb-12">
-            <span className="text-teal-600 font-medium text-sm uppercase tracking-wider">Leadership</span>
+            <span className="text-blue-600 font-medium text-sm uppercase tracking-wider">Qualities</span>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-3">
-              Meet Our <span className="bg-linear-to-r from-teal-600 to-teal-500 bg-clip-text text-transparent">Team</span>
+              Choose Us <span className="bg-linear-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent">Why Doctors </span>
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {team.map((member) => (
-              <div key={member.name} className="bg-white rounded-2xl border border-slate-200/60 shadow-sm overflow-hidden hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300 group">
-                <div className="h-48 bg-linear-to-br from-teal-100 to-teal-200 flex items-center justify-center">
-                  <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center text-teal-600 font-bold text-3xl shadow-lg">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {qualities.map((quality) => (
+              <div key={quality.title} className="bg-white rounded-2xl border border-slate-200/60 shadow-sm overflow-hidden hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300 group">
+                <div className="h-48 bg-linear-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+                 <Image src={quality.img} alt={quality.title} width={120} height={120} className="object-contain rounded-full" />
                 </div>
                 <div className="p-6 text-center">
-                  <h3 className="font-semibold text-slate-900 group-hover:text-teal-600 transition-colors duration-200">{member.name}</h3>
-                  <p className="text-teal-600 text-sm font-medium">{member.role}</p>
-                  <p className="text-slate-500 text-sm mt-1">{member.specialty}</p>
+                  <h3 className="font-semibold text-slate-900  transition-colors duration-200">{quality.title}</h3>
+                  <p className=" text-sm ">{quality.description}</p>
                 </div>
               </div>
             ))}

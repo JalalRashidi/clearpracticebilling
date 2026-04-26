@@ -8,16 +8,16 @@ const Logo = () => {
       href="/"
       className="hover:text-teal-600 transition-colors duration-200"
     >
-      {/* TopDoc<span className="text-teal-500">.</span> */}
+     
       
-       {/* <Image
-        src="/logo.png"
+       <Image
+        src="/cplogo1.png"
         alt="TopDoc Logo"
         width={1024}
         height={343}
-        className="w-48"
-       /> */}
-       <h1>Global Tech Billing</h1>
+        className="w-32"
+       />
+       {/* <h1>Global Tech Billing</h1> */}
     </Link>
   </div>
   )

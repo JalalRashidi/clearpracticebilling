@@ -16,7 +16,7 @@ export default function Footer() {
         {/* Logo + Description */}
         <div className="space-y-4">
           <Image
-            src="/logo.png" // replace with your logo
+            src="/cplogo1.png" // replace with your logo
             alt="Global Tech Billing"
             width={180}
             height={50}

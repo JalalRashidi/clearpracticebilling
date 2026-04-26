@@ -10,7 +10,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email',
-    details: ['info@topdoc.com', 'support@topdoc.com'],
+    details: ['info@clearpracticebilling.com', 'support@clearpracticebilling.com'],
   },
   {
     icon: MapPin,

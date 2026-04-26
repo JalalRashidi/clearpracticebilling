@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-
+import { motion, AnimatePresence, Variants } from "framer-motion";
 // ─── Types ───────────────────────────────────────────────────────────────────
 type StatType = "bar" | "simple";
 
@@ -125,7 +124,7 @@ const DATA: Record<string, ServiceData> = {
 };
 
 // ─── Animation Variants ───────────────────────────────────────────────────────
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -138,17 +137,21 @@ const containerVariants = {
   },
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 20, scale: 0.96 },
   visible: {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { type: "spring", stiffness: 280, damping: 24 },
+    transition: {
+      type: "spring", // ✅ now correctly inferred
+      stiffness: 280,
+      damping: 24,
+    },
   },
 };
 
-const headerVariants = {
+const headerVariants:Variants = {
   hidden: { opacity: 0, x: -12 },
   visible: {
     opacity: 1,
@@ -157,7 +160,7 @@ const headerVariants = {
   },
 };
 
-const dividerVariants = {
+const dividerVariants:Variants = {
   hidden: { scaleX: 0, originX: 0 },
   visible: {
     scaleX: 1,
