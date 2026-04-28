@@ -1,7 +1,7 @@
 import HeroSection from "@/components/sections/HeroSection";
-import ServicesSection from "@/components/sections/ServicesSection";
+// import ServicesSection from "@/components/sections/ServicesSection";
 // import SpecialtiesSection from "@/components/sections/SpecialtiesSection";
-import AwardsSection from "@/components/sections/AwardsSection";
+// import AwardsSection from "@/components/sections/AwardsSection";
 import { ArrowRight, CheckCircle2, Stethoscope } from "lucide-react";
 import RMCSection from "@/components/sections/RMCSection";
 import SpecialtiesSection from "@/components/sections/SpecialtiesSection";

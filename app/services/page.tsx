@@ -9,6 +9,7 @@ const pages = () => {
 export default pages
 
 import Image from 'next/image'
+import Link from 'next/link'
  function ServiceCard({ service }: { service: any }) {
   return (
     <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 flex flex-col">
@@ -33,9 +34,9 @@ import Image from 'next/image'
           {service.description}
         </p>
 
-        <button className="mt-auto text-blue-600 font-medium hover:underline">
-          Read More →
-        </button>
+        <Link href="/contact" className="mt-auto text-blue-600 font-medium hover:underline mx-auto">
+          Contact Us  →
+        </Link>
       </div>
     </div>
   );

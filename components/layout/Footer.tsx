@@ -4,6 +4,7 @@ import {
   Instagram,
   Youtube,
   Linkedin,
+  Link,
 } from "lucide-react";
 
 export default function Footer() {
@@ -76,6 +77,7 @@ export default function Footer() {
                 key={item}
                 className=" cursor-pointer transition"
               >
+                
                 {item}
               </li>
             ))}

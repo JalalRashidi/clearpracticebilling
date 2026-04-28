@@ -2,8 +2,8 @@
 import axios from "axios";
 
 const api = axios.create({
-  // baseURL: "http://localhost:5000/api",
-  baseURL: "/api",
+  baseURL: "http://localhost:5002/api",
+  // baseURL: "/api",
   timeout: 30000,
   headers: {
     "Content-Type": "application/json",
@@ -30,7 +30,8 @@ api.interceptors.response.use(
       error?.response?.data?.message ||
       error?.message ||
       "Something went wrong";
-    return Promise.reject(message);
+
+    return Promise.reject({message, status: error?.response?.status || 500 });
   }
 );
 

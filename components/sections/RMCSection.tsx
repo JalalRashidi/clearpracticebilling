@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
+import { useRouter } from "next/navigation";
 // ─── Types ───────────────────────────────────────────────────────────────────
 type StatType = "bar" | "simple";
 
@@ -310,6 +311,10 @@ export default function Dashboard() {
   const keys = Object.keys(DATA);
   const [activeKey, setActiveKey] = useState(keys[0]);
   const d = DATA[activeKey];
+  const router = useRouter();
+  function navigationTo  () {
+    router.push('/contact');
+  }
 
   return (
     <>
@@ -392,6 +397,7 @@ export default function Dashboard() {
                       color: d.textColor,
                       backgroundColor: d.bgLight,
                     }}
+                    onClick={navigationTo}
                   >
                     Learn more →
                   </motion.button>
