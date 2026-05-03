@@ -9,7 +9,7 @@ import OurBillingProcess from "@/components/sections/OurBillingProcess";
 import GettingStarted from "@/components/sections/GettingStarted";
 import Review from "@/components/sections/Reviews";
 import ContactForm from "@/components/sections/ContactForm";
-
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -72,10 +72,10 @@ const WhyYouChoseUs = () => (
 
   {/* Refined CTA */}
   <div className="pt-4">
-    <button className="w-full sm:w-auto px-10 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold transition-all shadow-lg shadow-blue-200 hover:shadow-blue-300 flex items-center justify-center gap-2 group active:scale-95">
+    <Link href="/contact" className="w-full sm:w-auto px-10 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold transition-all shadow-lg shadow-blue-200 hover:shadow-blue-300 flex items-center justify-center gap-2 group active:scale-95">
       Book a Consultation
       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-    </button>
+    </Link>
     <p className="mt-3 text-xs text-center sm:text-left text-slate-400">
       Stop leaving money on the table. Speak with an expert today.
     </p>

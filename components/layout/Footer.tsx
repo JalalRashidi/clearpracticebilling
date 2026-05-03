@@ -4,24 +4,26 @@ import {
   Instagram,
   Youtube,
   Linkedin,
-  Link,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-blue-600 ">
-
+    <footer className="bg-blue-600">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
         {/* Logo + Description */}
         <div className="space-y-4">
-          <Image
-            src="/cplogo1.png" // replace with your logo
-            alt="Global Tech Billing"
-            width={180}
-            height={50}
-          />
+          <Link href="/">
+            <Image
+              src="/cplogo1.png"
+              alt="Global Tech Billing"
+              width={180}
+              height={50}
+              className="cursor-pointer"
+            />
+          </Link>
 
           <p className="text-white text-sm leading-relaxed">
             A trusted medical billing partner, providing secure, efficient, and
@@ -31,14 +33,29 @@ export default function Footer() {
 
           {/* Social Icons */}
           <div className="flex gap-4 pt-2">
-            {[Facebook, Instagram, Youtube, Linkedin].map((Icon, i) => (
-              <div
-                key={i}
-                className="w-9 h-9 flex items-center justify-center rounded-lg bg-white shadow hover:bg-blue-600 hover:text-white transition cursor-pointer"
-              >
-                <Icon size={18} />
+            <Link href="https://facebook.com" target="_blank">
+              <div className="w-9 h-9 flex items-center justify-center rounded-lg bg-white shadow hover:bg-blue-600 hover:text-white transition cursor-pointer">
+                <Facebook size={18} />
               </div>
-            ))}
+            </Link>
+
+            <Link href="https://instagram.com" target="_blank">
+              <div className="w-9 h-9 flex items-center justify-center rounded-lg bg-white shadow hover:bg-blue-600 hover:text-white transition cursor-pointer">
+                <Instagram size={18} />
+              </div>
+            </Link>
+
+            <Link href="https://youtube.com" target="_blank">
+              <div className="w-9 h-9 flex items-center justify-center rounded-lg bg-white shadow hover:bg-blue-600 hover:text-white transition cursor-pointer">
+                <Youtube size={18} />
+              </div>
+            </Link>
+
+            <Link href="https://linkedin.com" target="_blank">
+              <div className="w-9 h-9 flex items-center justify-center rounded-lg bg-white shadow hover:bg-blue-600 hover:text-white transition cursor-pointer">
+                <Linkedin size={18} />
+              </div>
+            </Link>
           </div>
         </div>
 
@@ -48,21 +65,12 @@ export default function Footer() {
             Services
           </h3>
           <ul className="space-y-3 text-white text-sm">
-            {[
-              "Medical Billing",
-              "Revenue Cycle Management",
-              "Medical Coding",
-              "Credentialing and Enrollment",
-              "Medical Scribe",
-              "Digital Marketing",
-            ].map((item) => (
-              <li
-                key={item}
-                className=" cursor-pointer transition"
-              >
-                {item}
-              </li>
-            ))}
+            <li><Link href="/services">Medical Billing</Link></li>
+            <li><Link href="/services">Revenue Cycle Management</Link></li>
+            <li><Link href="/services">Medical Coding</Link></li>
+            <li><Link href="/services">Credentialing and Enrollment</Link></li>
+            <li><Link href="/services">Medical Scribe</Link></li>
+            <li><Link href="/services">Digital Marketing</Link></li>
           </ul>
         </div>
 
@@ -72,15 +80,10 @@ export default function Footer() {
             Quick Links
           </h3>
           <ul className="space-y-3 text-white text-sm">
-            {["About", "Services", "Contact", "Privacy Policy"].map((item) => (
-              <li
-                key={item}
-                className=" cursor-pointer transition"
-              >
-                
-                {item}
-              </li>
-            ))}
+            <li><Link href="/about">About</Link></li>
+            <li><Link href="/services">Services</Link></li>
+            <li><Link href="/contact">Contact</Link></li>
+            <li><Link href="/policy/privacy-policy">Privacy Policy</Link></li>
           </ul>
         </div>
 
@@ -92,12 +95,16 @@ export default function Footer() {
 
           <div className="space-y-3 text-white text-sm">
             <p>
-              <span className="font-medium text-white">Phone:</span>{" "}
-              (424) 231-4181
+              <span className="font-medium">Phone:</span>{" "}
+              <a href="tel:+14242314181" className="hover:underline">
+                (424) 231-4181
+              </a>
             </p>
             <p>
-              <span className="font-medium text-white">Email:</span>{" "}
-              info@globaltechbilling.com
+              <span className="font-medium">Email:</span>{" "}
+              <a href="mailto:info@globaltechbilling.com" className="hover:underline">
+                info@globaltechbilling.com
+              </a>
             </p>
             <p>
               5396 N Reese Ave Fresno, CA 93722 <br />
@@ -108,7 +115,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-blue-600 text-white text-center py-4 text-sm">
+      <div className="bg-blue-700 text-white text-center py-4 text-sm">
         © 2026 All Rights Reserved.
       </div>
     </footer>

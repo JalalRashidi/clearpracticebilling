@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import heroBg from "@/public/images/hero-bg.png"
+import Link from 'next/link'
 
 const HeroContent = () => (
   <motion.div
@@ -43,15 +44,15 @@ const HeroContent = () => (
 
     {/* CTA */}
     <div className="flex flex-col sm:flex-row gap-4 pt-4">
-      <button className="px-6 sm:px-8 py-3 sm:py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group">
+      <Link href={'/contact'} className="px-6 sm:px-8 py-3 sm:py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group">
         Book a Meeting
         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-      </button>
+      </Link>
 
       {/* Secondary CTA (optional but improves UX) */}
-      <button className="px-6 sm:px-8 py-3 sm:py-4 border border-gray-300 hover:border-blue-500 rounded-xl font-semibold text-gray-700 hover:text-blue-600 transition">
+      {/* <button className="px-6 sm:px-8 py-3 sm:py-4 border border-gray-300 hover:border-blue-500 rounded-xl font-semibold text-gray-700 hover:text-blue-600 transition">
         Learn More
-      </button>
+      </button> */}
     </div>
   </motion.div>
 )

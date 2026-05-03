@@ -3,6 +3,7 @@
 import { useRef } from 'react'
 import { motion, useScroll, useSpring } from 'framer-motion'
 import { FileText, Send, BarChart3, CheckCircle2 } from 'lucide-react'
+import Link from 'next/link'
 
 const steps = [
   {
@@ -150,9 +151,9 @@ export default function OurBillingProcess() {
           transition={{ delay: 0.5 }}
           className="mt-20 text-center"
         >
-          <button className="px-10 py-4 bg-slate-900 text-white rounded-full font-bold hover:bg-blue-600 hover:shadow-2xl hover:shadow-blue-200 transition-all duration-300 transform hover:-translate-y-1">
+          <Link href="/contact" className="px-10 py-4 bg-slate-900 text-white rounded-full font-bold hover:bg-blue-600 hover:shadow-2xl hover:shadow-blue-200 transition-all duration-300 transform hover:-translate-y-1">
             Get Started With Us
-          </button>
+          </Link>
         </motion.div>
       </div>
     </section>
