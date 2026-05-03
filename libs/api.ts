@@ -2,8 +2,8 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:5002/api",
-  // baseURL: "/api",
+  // baseURL: "http://localhost:5002/api",
+  baseURL: "https://clearpracticebilling-back.vercel.app/api",
   timeout: 30000,
   headers: {
     "Content-Type": "application/json",
