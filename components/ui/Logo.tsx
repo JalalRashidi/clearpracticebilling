@@ -11,7 +11,7 @@ const Logo = () => {
      
       
        <Image
-        src="/cplogo1.png"
+        src="/gtlogo.png"
         alt="TopDoc Logo"
         width={1024}
         height={343}

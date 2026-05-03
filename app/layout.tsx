@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MedBillPro - Streamlined Medical Billing Services",
+  title: "Global Tech Billing LLC",
 };
 
 export default function RootLayout({
