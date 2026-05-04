@@ -80,7 +80,7 @@ export default function AboutPage() {
             Precision-Driven Medical Billing. <br /> Transparent Pricing. <br /> <span className="bg-linear-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent">Real Results.</span>
           </h1>
           <p className="text-slate-500 max-w-3xl mx-auto text-lg leading-relaxed text-justify">
-            At Clear Practice Billing, we help healthcare providers simplify their revenue cycle, reduce administrative strain, and recover more of what they’ve earned — without the cost of managing an in-house billing team. With over a decade of real-world billing experience and deep knowledge across 50+ specialties, we act as a direct extension of your practice — not just another outsourced vendor.
+            At Global Tech Billing LLC, we help healthcare providers simplify their revenue cycle, reduce administrative strain, and recover more of what they’ve earned — without the cost of managing an in-house billing team. With over a decade of real-world billing experience and deep knowledge across 50+ specialties, we act as a direct extension of your practice — not just another outsourced vendor.
 
           </p>
           <p className="text-slate-500 max-w-3xl mx-auto text-lg leading-relaxed text-justify">

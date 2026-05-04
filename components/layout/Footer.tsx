@@ -33,25 +33,25 @@ export default function Footer() {
 
           {/* Social Icons */}
           <div className="flex gap-4 pt-2">
-            <Link href="https://facebook.com" target="_blank">
+            <Link href=" https://www.facebook.com/GlobalTechBilling" target="_blank">
               <div className="w-9 h-9 flex items-center justify-center rounded-lg bg-white shadow hover:bg-blue-600 hover:text-white transition cursor-pointer">
                 <Facebook size={18} />
               </div>
             </Link>
 
-            <Link href="https://instagram.com" target="_blank">
+            <Link href=" https://www.instagram.com/globaltechbillingllc/" target="_blank">
               <div className="w-9 h-9 flex items-center justify-center rounded-lg bg-white shadow hover:bg-blue-600 hover:text-white transition cursor-pointer">
                 <Instagram size={18} />
               </div>
             </Link>
 
-            <Link href="https://youtube.com" target="_blank">
+            <Link href="https://www.youtube.com/@GlobalTechBillingLLC" target="_blank">
               <div className="w-9 h-9 flex items-center justify-center rounded-lg bg-white shadow hover:bg-blue-600 hover:text-white transition cursor-pointer">
                 <Youtube size={18} />
               </div>
             </Link>
 
-            <Link href="https://linkedin.com" target="_blank">
+            <Link href=" https://www.linkedin.com/company/global-tech-billing-llc" target="_blank">
               <div className="w-9 h-9 flex items-center justify-center rounded-lg bg-white shadow hover:bg-blue-600 hover:text-white transition cursor-pointer">
                 <Linkedin size={18} />
               </div>
