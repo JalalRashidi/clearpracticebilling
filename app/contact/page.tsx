@@ -5,12 +5,12 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Phone',
-    details: ['+1 (555) 123-4567', '+1 (555) 987-6543'],
+    details: ['+1 (424) 231-4181', ],
   },
   {
     icon: Mail,
     title: 'Email',
-    details: ['info@clearpracticebilling.com', 'support@clearpracticebilling.com'],
+    details: ['info@globaltechbilling.com', 'support@globaltechbilling.com'],
   },
   {
     icon: MapPin,
