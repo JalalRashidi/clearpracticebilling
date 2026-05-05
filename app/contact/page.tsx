@@ -10,12 +10,12 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email',
-    details: ['info@globaltechbilling.com', 'support@globaltechbilling.com'],
+    details: ['info@globaltechbilling.com'],
   },
   {
     icon: MapPin,
     title: 'Address',
-    details: ['123 Medical Center Drive', 'New York, NY 10001'],
+    details: [' 5396 N Reese Ave Fresno, CA 93722 (Virtual Address)'],
   },
   {
     icon: Clock,
